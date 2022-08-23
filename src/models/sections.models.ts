@@ -1,9 +1,9 @@
 interface Items {
-  title: string,
+  title: string
   url: string
 }
 
-export interface Section { 
-  title: string, 
+export interface Section {
+  title: string
   items: Items[]
-};
+}

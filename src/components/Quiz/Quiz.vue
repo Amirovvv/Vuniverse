@@ -115,25 +115,26 @@ const btnAnswers = computed(() => {
             Начать заново
           </button>
         </div>
-        <div
-          v-for="(question, index) in quizStore.questions"
-          :key="`question-${index}`"
-          v-if="resultsShow"
-        >
-          <div :class="$style.question">{{ question.question }}</div>
-          <div>
-            <ul>
-              <li
-                v-for="(answer, index) in question.answers"
-                :key="`answer-${index}`"
-                :class="[
-                  $style.answers,
-                  select ? $style[checkAnswer(answer)] : '',
-                ]"
-              >
-                {{ answer.text }}
-              </li>
-            </ul>
+        <div v-if="resultsShow">
+          <div
+            v-for="(question, index) in quizStore.questions"
+            :key="`question-${index}`"
+          >
+            <div :class="$style.question">{{ question.question }}</div>
+            <div>
+              <ul>
+                <li
+                  v-for="(answer, index) in question.answers"
+                  :key="`answer-${index}`"
+                  :class="[
+                    $style.answers,
+                    select ? $style[checkAnswer(answer)] : '',
+                  ]"
+                >
+                  {{ answer.text }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

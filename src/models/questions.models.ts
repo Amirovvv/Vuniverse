@@ -1,13 +1,13 @@
 export interface Answer {
-	text: string
-	correct?: boolean
+  text: string
+  correct?: boolean
 }
 
 export interface Questions {
-	question: string
-	answers: Answer[]
+  question: string
+  answers: Answer[]
 }
 
 export interface Response {
-	[key: string | number]: Questions
+  [key: string | number]: Questions
 }
