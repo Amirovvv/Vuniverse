@@ -1,0 +1,41 @@
+.sidebar {
+  border-right: 1px solid #dedddd;
+  width: 300px;
+  flex: 0 0 auto;
+  padding: 32px;
+}
+
+.section {
+  padding-top: 16px;
+  font-size: 14px;
+}
+
+.section a {
+  display: block;
+  text-decoration: none;
+  color: #3c3c3cb3;
+}
+
+.section a:hover {
+  color: #000;
+}
+
+.sectionTitle,
+.sectionLink {
+  padding: 4px 0;
+}
+
+.sectionTitle {
+  color: #000;
+  font-weight: 700;
+}
+
+.sectionLink {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sectionLinkActive {
+  color: #42b883 !important;
+  font-weight: 600;
+}

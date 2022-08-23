@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Section from '../../types/sections'
+import { Section } from '@/models/sections.models'
 
 const sections = ref<Section[]>([
 	{
@@ -18,23 +18,20 @@ const sections = ref<Section[]>([
 </script>
 
 <template>
-	<aside class="sidebar">
-		<nav class="sidebar__nav">
+	<aside :class="$style.sidebar">
+		<nav class="nav">
 			<section
-				class="sidebar__section"
+				:class="$style.section"
 				v-for="(section, index) in sections"
 				:key="`section-${index}`"
 			>
-				<div class="sidebar__section-title">{{ section.title }}</div>
+				<div :class="$style.sectionTitle">{{ section.title }}</div>
 				<div
-					class="sidebar__section-link"
+					:class="$style.sectionLink"
 					v-for="(item, index) in section.items"
 					:key="`item-${index}`"
 				>
-					<router-link
-						:to="item.url"
-						active-class="sidebar__section-link_active"
-					>
+					<router-link :to="item.url" :active-class="$style.sectionLinkActive">
 						{{ item.title }}
 					</router-link>
 				</div>
@@ -43,44 +40,6 @@ const sections = ref<Section[]>([
 	</aside>
 </template>
 
-<style lang="scss" scoped>
-.sidebar {
-	border-right: 1px solid #dedddd;
-	width: 300px;
-	flex: 0 0 auto;
-	padding: 32px;
-}
-
-.sidebar__section {
-	padding-top: 16px;
-	font-size: 14px;
-
-	& a {
-		display: block;
-		text-decoration: none;
-		color: #3c3c3cb3;
-
-		&:hover {
-			color: #000;
-		}
-	}
-
-	&-title,
-	&-link {
-		padding: 4px 0;
-	}
-	&-title {
-		color: #000;
-		font-weight: 700;
-	}
-	&-link {
-		font-weight: 500;
-		cursor: pointer;
-
-		&_active {
-			color: #42b883 !important;
-			font-weight: 600;
-		}
-	}
-}
+<style module>
+@import './sidebar.module.scss';
 </style>

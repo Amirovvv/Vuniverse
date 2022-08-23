@@ -1,11 +1,9 @@
-type Items = {
+interface Items {
   title: string,
   url: string
 }
 
-type Section = { 
+export interface Section { 
   title: string, 
   items: Items[]
 };
-
-export default Section
