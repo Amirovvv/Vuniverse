@@ -1,0 +1,86 @@
+.loading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.numQuestion {
+  padding: 12px;
+  background: #efecec;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.numQuestion span {
+  color: rgb(233, 53, 53);
+}
+
+.question {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.answers {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-top: 6px;
+  list-style: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.quizBtn {
+  width: 300px;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #f97464;
+  color: #fff;
+  cursor: pointer;
+}
+
+.quizBtn:hover {
+  background: #cf5648;
+}
+
+.quizBtn:disabled {
+  cursor: no-drop;
+}
+
+.score {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.correct {
+  background: #49db4a;
+  border: 1px solid #49db4a;
+}
+
+.wrong {
+  background: #f97464;
+  border: 1px solid #f97464;
+}
+
+.correct,
+.wrong {
+  color: #fff;
+  pointer-events: none;
+}
+
+.center {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.ml {
+  margin-left: 12px;
+}
